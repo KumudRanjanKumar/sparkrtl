@@ -1,0 +1,11 @@
+# big or downloaded files stay out of git
+data/*.json
+data/*.jsonl
+data/*.csv
+results/
+outputs/
+verilog-eval/
+__pycache__/
+.venv/
+.pytest_cache/
+.DS_Store

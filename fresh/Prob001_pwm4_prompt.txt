@@ -1,0 +1,17 @@
+I would like you to implement a module named TopModule with the following
+interface. All input and output ports are one bit unless otherwise
+specified.
+
+ - input  clk
+ - input  reset
+ - input  duty (4 bits)
+ - output pwm
+
+The module is a PWM generator. It has a 4-bit counter that counts
+0, 1, 2, ..., 15, 0, 1, ... advancing by one on every rising edge of clk.
+reset is synchronous and active high: when reset is 1 at a rising clock
+edge, the counter becomes 0. The output pwm is 1 when the counter value is
+less than duty, and 0 otherwise. pwm is combinational: it depends only on
+the current counter value and the current duty input, with no extra
+register. So with duty = 0 the output is always 0, and with duty = 15 it is
+1 for 15 out of every 16 clock cycles.
